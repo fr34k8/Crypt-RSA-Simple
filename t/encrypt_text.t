@@ -1,4 +1,4 @@
-use Test::More tests => 2;
+use Test::More tests => 3;
 
 use FindBin qw($RealBin);
 use lib "$RealBin/../lib";
@@ -19,5 +19,11 @@ $crypt2->private_key("$RealBin/keys/test_key.priv");
 my $encrypted_text2 = $crypt2->encrypt($text);
 my $decrypted_text2 = $crypt2->decrypt($encrypted_text2);
 
-ok( $decrypted_text eq $text,  "encrypt/decrypt - as new() params" );
-ok( $decrypted_text2 eq $text, "encrypt/decrypt - as getter/setter params" );
+my $crypt3 = Crypt::RSA::Simple->new();
+my $encrypted_text3 = $crypt3->encrypt( $text, "$RealBin/keys/test_key.pub" );
+my $decrypted_text3 =
+  $crypt3->decrypt( $encrypted_text3, "$RealBin/keys/test_key.priv" );
+
+ok( $decrypted_text eq $text,  "as new() params" );
+ok( $decrypted_text2 eq $text, "as getter/setter params" );
+ok( $decrypted_text3 eq $text, "as crypt/decrypt params" );
