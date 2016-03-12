@@ -1,0 +1,6 @@
+.gitignore
+MYMETA.json
+MYMETA.yml
+README.pod
+.git
+^Makefile$
