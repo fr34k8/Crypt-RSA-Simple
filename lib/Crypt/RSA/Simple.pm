@@ -23,7 +23,7 @@ B<Crypt::RSA::Simple> - Encrypts/decrypts text with RSA keys
   
   $crypt->generate()
 
-Or it can be used as
+Or it can be fed with method arguments:
 
   my $crypt = Crypt::RSA::Simple->new();
 
@@ -35,15 +35,17 @@ Or it can be used as
   );
 
 Private and public keys can be set with
-their getter/setter methods:
+their getter/setter methods as well as the
+key_dir and key_size:
 
   my $crypt->private_key( '/home/user/keys/secret.priv' );
   my $crypt->public_key( '/home/user/keys/secret.pub' );
+
   my $crypted   = $crypt->encrypt( 'text to crypt' );
   my $encrypted = $crypt->decrypt( $crypted );
 
 Or keys can be used with the C<crypt> and C<decrypt>
-methods as arguments:
+methods as their arguments as well:
 
   my $decrypted = $crypt->decrypt(
     'encrypted text',
@@ -52,14 +54,14 @@ methods as arguments:
 
 =head1 DESCRIPTION
 
-B<Crypt::RSA::Simple> is just a tiny wrapper on the top of the
+B<Crypt::RSA::Simple> is just a tiny but flexible wrapper on the top of the
 C<Crypt::OpenSSL::RSA> library. It encrypts and decrypts
 any text, and it can generate RSA keys if necessary.
 
 This tool does not give any new features to the original module,
 rather it wraps it into an easy-to-use form.
 
-It uses C<MIME::Base64> to encode/decode the text, makes it
+It uses C<MIME::Base64> to encode/decode the crypted text, makes it
 easier to store it on a drive e.g. in a file.
 
 =head1 METHODS
@@ -173,7 +175,8 @@ C<private_key>: Name of the key (String)
 C<public_key>: Name of the key (String)
 
 This method generates a key pair into the C<key_dir> to
-encrypt and decrypt with.
+encrypt and decrypt with. If it is called without arguments
+it uses the default values.
 
 =cut
 
