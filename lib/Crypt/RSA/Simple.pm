@@ -59,7 +59,9 @@ C<Crypt::OpenSSL::RSA> library. It encrypts and decrypts
 any text, and it can generate RSA keys if necessary.
 
 This tool does not give any new features to the original module,
-rather it wraps it into an easy-to-use form.
+rather it wraps it into an easy-to-use form. It offers an elegant,
+pure Perl OO interface, the procedural interface for encryption and
+decryption is on the roadmap, as well as a script for key generation.
 
 It uses C<MIME::Base64> to encode/decode the crypted text, makes it
 easier to store it on a drive e.g. in a file.
