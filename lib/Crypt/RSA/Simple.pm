@@ -52,6 +52,10 @@ methods as their arguments as well:
     '/home/user/keys/secret.priv'
   );
 
+Class methods and instance methods are both supported:
+
+  Crypt::RSA::Simple->encrypt( 'text', '/home/user/keys/secret.pub' );
+
 =head1 DESCRIPTION
 
 B<Crypt::RSA::Simple> is just a tiny but flexible wrapper on the top of the
