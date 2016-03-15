@@ -10,7 +10,7 @@ use Carp;
 
 B<Crypt::RSA::Simple> - Encrypts/decrypts text with RSA keys
 
-=head1 SYNOPSYS
+=head1 SYNOPSIS
 
   use Crypt::RSA::Simple;
 
