@@ -165,7 +165,7 @@ sub key_size {
     return $self->{'key_size'};
 }
 
-=item B<generate_keys>:
+=item B<generate>:
 
 Method for private and public key generation
 
@@ -185,7 +185,7 @@ it uses the default values.
 
 =cut
 
-sub generate_keys {
+sub generate {
     my $self = shift;
 
     if (@_) {
