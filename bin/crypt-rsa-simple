@@ -55,8 +55,6 @@ This tool is a simple command line interface for Crypt::RSA::Simple.
 
 =over 4
 
-=head3OPTIONS
-
 =item --public_key
 
 Public key to encrypt with
@@ -74,8 +72,6 @@ Print out the crypt as string or block
 =head2 decrypt
 
 =over 4
-
-=head3 OPTIONS
 
 =item --private_key
 
