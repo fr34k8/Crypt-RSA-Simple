@@ -1,38 +1,52 @@
 =head1 NAME
 
-B<crpyt-rsa-simple-keygen> - Generate RSA keypairs for Crypt::RSA::Simple
+B<crypt-rsa-simple> - Command line interface for Crypt::RSA::Simple
 
 =head1 SYNOPSIS
 
-  crpyt-rsa-simple-keygen --key_size 2048 --key_dir /home/user/keys \
-  --private_key secure.priv --public_key secure.pub
+  crypt-rsa-simple encrypt --public_key /home/user/keys/secure.pub --text 'Text to encrypt'
+
+  crypt-rsa-simple decrypt --private_key /home/user/keys/secure.priv --text '11jXVZSFEzsvc5ZfgSZUn3BRIGF9wihPPQmXdmEGYmpuwg0xBD/rOEhqoSgsPwCdSu1/NRsuWmjLnsovfE4dLeMmq+cLheNZ7DkctuMSh7ceG4OQ3zNA/nlYdWxNMRiO/xxshubj/YEz7uiJypORHqPv1Y2LBuE+qlOBxRh0Ozdt6Xk6gWrjonnq2I/1pCzEI7Vkuz3kFtAYbRVLrTScsv7XCSJxCcpSmCBjbeVA1INwdrkijQq41b7N+8YKzRH/rhdSTecJ9Ug7SaRlI3yjy9uNT428pP7VM7WtMFMDDlDJIxsU+hb1i6AnWtBx5X9cM0J8AQPhtLKGFxvWo9W+Q=='
 
 =head1 DESCRIPTION
 
-This tool is a helper script for generating valid RSA keypairs
-for the Crypt::RSA::Simple module. Unless command line options
-are provided, the default options will be used, thus all
-of them are optional, but recommended to use.
+This tool is a simple command line interface for Crypt::RSA::Simple.
 
-=head1 OPTIONS
+=head1 ARGUMENTS
+
+=head2 encrypt
 
 =over 4
 
-=item B<--key_size> (default: 2048)
+=head OPTIONS
 
-Key size for generation
+=item --public_key
 
-=item B<--key_dir> (default: /var/tmp)
+Public key to encrypt with
 
-Directory for generating the keys into
+=item --text
 
-=item B<--public_key> (default: secure_rsa_key.pub)
+Plain text to encrypt
 
-Name of the public key
+=item --block
 
-=item B<--private_key> (default: secure_rsa_key.priv)
+Print out the crypt as string or block
 
-Name of the private key
+=back
+
+=head2 decrypt
+
+=over 4
+
+=head3 OPTIONS
+
+=item --private_key
+
+Private key to decrypt with
+
+=item --text
+
+Encrypted text to decrypt
 
 =back
 
@@ -44,5 +58,4 @@ Tamas Molnar <stiron@gmail.com>
 
 Copyright 2015, Tamas Molnar
 
-This library is free software; you may redistribute it and/or
-modify it under the same terms as Perl itself.
+This library is free software; you may redistribute it and/or modify it under the same terms as Perl itself.
