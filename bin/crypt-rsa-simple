@@ -55,7 +55,7 @@ This tool is a simple command line interface for Crypt::RSA::Simple.
 
 =over 4
 
-=head OPTIONS
+=head3OPTIONS
 
 =item --public_key
 
