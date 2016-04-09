@@ -137,6 +137,10 @@ C<private_key>: Private key for encryption (String)
 
 =back
 
+=head1 NON-CORE DEPENDENCIES
+
+L<Crypt::OpenSSL::RSA>
+
 =head1 AUTHOR
 
 Tamas Molnar <stiron@gmail.com>

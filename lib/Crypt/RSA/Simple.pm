@@ -272,6 +272,10 @@ sub decrypt {
 
 =cut
 
+=head1 NON-CORE DEPENDENCIES
+
+L<Crypt::OpenSSL::RSA>
+
 =head1 AUTHOR
 
 Tamas Molnar <stiron@gmail.com>
