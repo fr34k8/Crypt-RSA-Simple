@@ -52,6 +52,6 @@ Tamas Molnar <stiron@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2015, Tamas Molnar
+Copyright 2016, Tamas Molnar
 
 This library is free software; you may redistribute it and/or modify it under the same terms as Perl itself.
